@@ -3,7 +3,7 @@ const app=express();//running the express function
 const port=8000;  //when we deploy our product then we change our port to 80
 
 //use express router
-app.use('/',require('./routes'));
+app.use('/',require('./routes/index'));
 
 
 app.listen(port,function(err)
