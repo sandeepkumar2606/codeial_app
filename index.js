@@ -6,6 +6,16 @@ const expressLayout=require('express-ejs-layouts');
 //now saying to express to use this layout before the router
 app.use(expressLayout);
 
+//saying express to use static files
+app.use(express.static('./assets'));
+
+
+//extract style and script from subpages into the layout
+app.set('layout extractStyles',true);
+app.set('layout extractScripts',true);
+
+
+
 //use express router
 app.use('/',require('./routes/index'));
 

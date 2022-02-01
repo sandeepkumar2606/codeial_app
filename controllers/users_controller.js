@@ -1,14 +1,7 @@
 module.exports.profile=function(req,res)
 {
-    return res.render('home',{
-        title:"profile"
+    return res.render('user_profile',{
+        title:"User Profile"
     });
 }
 
-
-module.exports.contact=function(req,res)
-{
-    return res.render('home',{
-        title:"contact"
-    });
-}
