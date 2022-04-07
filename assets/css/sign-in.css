@@ -16,7 +16,7 @@ body {
     font-size: 2rem;
     font-family: serif;
     border: none;
-    border-radius: 2%;
+    border-radius: 1rem;
     background-color: #dce5e8;
     box-shadow: 3px 3px 2px #151313; }
   #form-div #submit-button {

@@ -1,13 +1,13 @@
 body
 {
-    margin:0;
+    margin:0rem;
     
     #main-body
     {
-        margin-top:-1.4rem;
-        height: 90%;
+        min-height: 90%;
+        height: auto !important;
         background: linear-gradient(to right, #4f4f8a, #a4a4ab 55%);
         opacity: 0.98;
+        padding:0.1rem;
     }
-    /* text-align: center; */
 }
