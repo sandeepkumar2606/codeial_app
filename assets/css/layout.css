@@ -1,5 +1,8 @@
-body
-{
-    margin:0;
-    text-align: center;
-}
+body {
+  margin: 0;
+  /* text-align: center; */ }
+  body #main-body {
+    margin-top: -1.4rem;
+    height: 90%;
+    background: linear-gradient(to right, #4f4f8a, #a4a4ab 55%);
+    opacity: 0.98; }

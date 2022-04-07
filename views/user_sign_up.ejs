@@ -1,12 +1,30 @@
-<h1>Sign Up</h1>
+<link rel="stylesheet" href="/css/sign-up.css">
 
-<form action="/users/create" method="post">
+<div id="sign-up-form-div">
+    <h1>Sign Up</h1>
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="password" name="password" placeholder="Your Password" required>
-    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-    <input type="submit" value="Sign Up">
-
-
-</form>
+    <form action="/users/create" method="post">
+    
+        <div>
+            <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        
+        <div>
+            <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        
+        <div>
+            <input type="password" name="password" placeholder="Your Password" required>
+        </div>
+        
+        <div>
+            <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        </div>
+        
+        <div>
+            <input type="submit" value="Sign Up" id="submit-button">
+        </div>
+    
+    
+    </form>
+</div>

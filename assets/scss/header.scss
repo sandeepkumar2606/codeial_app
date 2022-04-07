@@ -1,0 +1,45 @@
+#page-header
+{
+    display: flex;
+    background-color: rgb(23, 23, 54);
+    color:white;
+    font-size: 1.7rem;
+    padding:0.1rem;
+    line-height: 0.8rem;
+    justify-content: space-between;
+
+    #first-para
+    {
+        margin-left:0.5rem;
+        width: 70%;
+        font-size: 2rem;
+    }
+    
+    
+    #second-para,ul
+    {
+
+        li{
+            display: inline-block;
+            margin-right:0.8rem;
+            
+            a
+            {
+                text-decoration: none;
+                color: white;
+
+                &:hover
+                {
+                    color:rgb(151, 127, 138);
+                    transition: 0.5s;
+                }
+            }
+
+        
+        }
+        
+        
+    }
+
+}
+
