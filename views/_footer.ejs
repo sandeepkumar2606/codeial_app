@@ -1,8 +1,7 @@
-<script src="https://kit.fontawesome.com/69891a8400.js" crossorigin="anonymous"></script>
 <footer>
     <div id="first-div">
         <span>
-            <i class="fa-solid fa-registered"></i>
+            <i>&copy;</i>
         </span>
         <span>
             Coding Ninjas. All Rights Reserved
@@ -13,8 +12,19 @@
         <div>
             <a href="/">Home</a>
         </div>
+
+        <% if(locals.user) { %>
+        
         <div>
-            <a href="/users/profile">Profile</a>
+            <a href="/users/profile/<%= user._id %>">Profile</a>
         </div>
+
+        <% } else { %>
+
+        <div>
+            <a href="/users/sign-in">Profile</a>
+        </div>
+
+        <% } %>
     </div>
 </footer>

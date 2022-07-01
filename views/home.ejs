@@ -1,35 +1,71 @@
-<h1>
+<script src="https://kit.fontawesome.com/69891a8400.js" crossorigin="anonymous"></script>
+<!-- <h1>
     Codeial / <%= title %>
-</h1>
+</h1> -->
 
-<section id="feed-posts">
-    <h4>Posts</h4>
+<div id="home-container">
 
-    <% if(locals.user) { %>
+    <section id="feed-posts">
 
-        <form action="/posts/create" id="new-post-form" method="post">
-            <textarea name="content" cols="30" rows="3" placeholder="Type Here..."></textarea>
-            <input type="submit" value="Post">
-        </form>
+        <div id="main-heading-ofpost">
 
-    <% } %>
+            <h1>
+                <i class="fas fa-clipboard"></i>
+                Posts
+            </h1>
 
-            <div id="posts-list-container">
-                <ul>
-                    <% for(post of posts) { %>
+        </div>
 
-                        <p>
-                            <li>
-                                <%= post.content %>
-                                    <br>
-                                    <small>
-                                        <%= post.user.name %>
-                                    </small>
-                            </li>
+        <% if(locals.user) { %>
 
-                        </p>
+            <form action="/posts/create" id="new-post-form" method="post">
+                <textarea name="content" cols="30" rows="3" placeholder="Type Here..." required></textarea>
+                <div>
+                    <input type="submit" value="Post" id="post-submit-button">
+                </div>
+            </form>
 
-                        <% } %>
-                </ul>
-            </div>
-</section>
+            <% } %>
+
+                <div id="posts-list-container">
+                    <ul>
+                        <% for(post of posts) { %>
+
+                            <%- include('_post') -%>
+
+                                <% } %>
+                    </ul>
+                </div>
+    </section>
+
+
+    <div id="user-friends">
+        
+        <section id="user-friends-inner">
+
+            <h1>
+                <i class="fas fa-user-friends"></i>
+                Friends
+            </h1>
+
+            <% for(u of all_users) { %>
+
+                <p>
+                    <a href="/users/profile/<%= u.id %>">
+                        <i class="fas fa-user"></i>
+                        <%= u.name %>
+                    </a>
+                </p>
+
+                <% } %>
+
+
+        </section>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="/js/home_posts.js"></script>

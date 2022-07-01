@@ -1,0 +1,178 @@
+#home-container {
+    display: flex;
+
+
+    #feed-posts {
+        width: 80%;
+        padding: 0.2rem;
+
+        form {
+
+            textarea {
+                margin: 0.2rem;
+                font-size: 1.5rem;
+                font-family: serif;
+                border: none;
+                border-radius: 0.5rem;
+                background-color: rgb(245, 247, 248);
+                box-shadow: 3px 3px 2px #151313;
+
+            }
+
+            #post-submit-button {
+                padding: 0.2rem;
+                font-weight: 700;
+                font-size: 1.5rem;
+                border-radius: 0.5rem;
+                margin: 0.2rem;
+                color: white;
+                background-color: #39394c;
+
+                &:hover {
+                    color: rgb(39, 76, 224);
+                    background-color: rgb(33, 35, 42);
+                    transition: 0.5s;
+                }
+            }
+        }
+
+
+        #main-heading-ofpost {
+            text-align: center !important;
+        }
+
+        #posts-list-container {
+            .particular-post {
+                background: linear-gradient(to bottom, #acacc0, #c9eff2 70%);
+                padding: 0.2rem;
+                width: 96%;
+                border-radius: 0.5rem;
+                box-shadow: 1px 3px 5px 2px #151313;
+                margin: 1.2rem;
+
+                #deleteicon {
+                    margin-left: 95%;
+                    font-size: 1.5rem;
+                    color: red;
+
+                    &:hover {
+                        transform: scale(1.2) translateY(3px);
+                        transition: 0.2s all;
+                    }
+                }
+
+                #deleteicon2 {
+                    margin-left: 1%;
+                    font-size: 1rem;
+                    color: rgb(243, 132, 132);
+
+                    &:hover {
+                        transform: scale(1.2) translateY(2px);
+                        color: red;
+                        transition: 0.2s all;
+                    }
+                }
+
+                #post-content {
+                    box-shadow: 5px 10px 10px #727272;
+                    background-color: #b9ccdf;
+                    border-radius: 1rem;
+                    margin: 0.2rem;
+                    min-height: 7rem;
+                    font-size: 2rem;
+                    height: auto !important;
+                    text-align: center;
+                }
+
+                .post-comments {
+                    padding: 0.2rem;
+
+                    form {
+
+                        input {
+                            margin: 0.2rem;
+                            font-size: 1rem;
+                            font-family: serif;
+                            border: none;
+                            border-radius: 0.5rem;
+                            background-color: rgb(220, 229, 232);
+                            box-shadow: 3px 3px 2px #151313;
+
+                        }
+
+                        #post-comment-button {
+                            padding: 0.2rem;
+                            font-weight: 700;
+                            font-size: 1rem;
+                            color: white;
+                            background-color: #39394c;
+
+                            &:hover {
+                                color: rgb(39, 76, 224);
+                                background-color: rgb(176, 179, 192);
+                                transition: 0.5s;
+                            }
+                        }
+                    }
+
+
+                    .post-comments-list {
+                        #comment-data {
+                            font-size: 1.2rem;
+                            font-family: serif;
+                            font-weight: 600;
+                        }
+
+                        #comment-data::before {
+                            content: " ";
+                            margin-left: 0.8rem;
+                        }
+                    }
+                }
+
+
+            }
+
+        }
+
+    }
+
+    #user-friends {
+        width: 20%;
+        padding: 0.2rem;
+        border: 1px solid lightgray;
+        height: 100%;
+        color:whitesmoke;
+
+        #user-friends-inner {
+            background-color: #11486f;
+            height:18rem;
+            margin:0.2rem;
+            padding:0.2rem;
+            overflow:scroll;
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                text-align: left;
+
+                a {
+                    text-decoration: none;
+                    font-size: 1.3rem;
+                    font-weight: 400;
+                    color:whitesmoke;
+                    font-family: cursive;
+
+                    &:hover {
+                        color: black;
+                    }
+                }
+            }
+        }
+
+
+
+    }
+}

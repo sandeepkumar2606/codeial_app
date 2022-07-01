@@ -1,13 +1,26 @@
 <header id="page-header">
 
-    <p id="first-para">codeial</p>
+    <p id="first-para">
+        <a href="/">codeial</a>
+    </p>
 
-    <p id="second-para">
+    <div id="second-para">
         <ul>
             <% if(locals.user){ %>
 
                 <li>
-                    <a href="/users/profile" >
+                    <a href="/users/profile/<%= user._id %>" >
+                        
+                        <% if(user.avatar) { %>
+                        
+                            <img src="<%= user.avatar %>" alt="<%= user.name %>" style="width: 17px; border-radius: 50%;">
+                        
+                        <% } else { %>
+
+                            <i class="fas fa-user"></i>
+
+                        <% } %>
+                        
                         <%= user.name %>
                     </a>
                 </li>
@@ -23,8 +36,8 @@
                         <a href="/users/sign-up">SignUp</a>
                     </li>
 
-                    <% } %>
+                <% } %>
         </ul>
-    </p>
+    </div>
 
 </header>

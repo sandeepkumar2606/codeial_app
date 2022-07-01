@@ -1,46 +1,57 @@
-#page-header
-{
+#page-header {
     display: flex;
     background-color: rgb(23, 23, 54);
-    color:white;
+    color: white;
     font-size: 1.7rem;
     // padding:0.1rem;
     line-height: 0.8rem;
     justify-content: space-between;
-    margin:0rem;
+    margin: 0rem;
 
-    #first-para
-    {
-        margin-left:0.5rem;
-        width: 70%;
-        font-size: 2rem;
+    #first-para {
+        margin-left: 0.5rem;
+        // font-size: 2rem;
+        
+        a
+        {
+            text-decoration: none;
+            color:white;
+            cursor:pointer;
+        }
     }
-    
-    
-    #second-para,ul
-    {
 
-        li{
-            display: inline-block;
-            margin-right:0.8rem;
-            
-            a
-            {
-                text-decoration: none;
-                color: white;
+    #second-para {
 
-                &:hover
-                {
-                    color:rgb(151, 127, 138);
-                    transition: 0.5s;
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+
+            li {
+                display: inline;
+                margin-right: 0.5rem;
+
+                a {
+                    text-decoration: none;
+                    padding:0.2rem;
+                    box-shadow: 1px 0.2px 1.2px 1px #b8a6a6;
+                    
+                    color:white;
+                    background-color: #0c1c39;
+
+                    &:hover {
+                        color: rgb(151, 127, 138);
+                        transition: 0.5s;
+                    }
                 }
+
+
             }
 
-        
+
         }
-        
-        
+
+
     }
 
 }
-

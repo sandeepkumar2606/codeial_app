@@ -16,11 +16,22 @@ const session = require('express-session');
 const passport = require('passport');
 const passportLocal = require('./config/passport-local-strategy');
 
+const passportJWT = require('./config/passport-jwt-strategy');
+
+const passportGoogle = require('./config/passport-google-oauth2-strategy');
+
 //setting up mongostore
 const MongoStore = require('connect-mongo');
 
 //requiring sass middleware for using sass
 const sassMiddleware = require('node-sass-middleware');
+
+//requiring the connect flash
+const flash = require('connect-flash');
+
+//requiring the middleware that we have made for the flash messages
+const customMware = require('./config/middleware'); 
+
 
 app.use(sassMiddleware({
     src: './assets/scss',
@@ -36,11 +47,16 @@ app.use(express.urlencoded());
 
 app.use(cookieParser());
 
+//saying express to use static files
+app.use(express.static('./assets'));
+
+//make the upload path available to the browser
+app.use('/uploads',express.static(__dirname + '/uploads'));
+
 //now saying to express to use this layout before the router
 app.use(expressLayout);
 
-//saying express to use static files
-app.use(express.static('./assets'));
+
 
 
 //extract style and script from subpages into the layout
@@ -78,6 +94,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(passport.setAuthenticatedUser);
+
+//use the flash after the session is being set
+app.use(flash());
+
+//use the customeMiddleware
+app.use(customMware.setFlash);
+
 
 //use express router
 app.use('/',require('./routes/index'));

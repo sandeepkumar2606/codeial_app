@@ -6,12 +6,12 @@ footer {
   padding: 1rem; }
   footer div {
     margin-right: 2%; }
-  footer #first-div, footer span, footer i {
+  footer #first-div span i {
     background-color: transparent;
     color: white; }
-  footer #second-div, footer div, footer a {
+  footer #second-div div a {
     text-decoration: none;
     color: white; }
-    footer #second-div:hover, footer div:hover, footer a:hover {
+    footer #second-div div a:hover {
       color: #977f8a;
       transition: 0.5s; }

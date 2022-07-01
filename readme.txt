@@ -20,7 +20,7 @@ now the next step is fireup our express server
 then we add nodemon index.js in the package.json in the start key so that we don't have to write nodemon index.js bari bari 
 so we now write npm start to run our server
 
-then we intialize the git repositry by writing command gitint 
+then we intialize the git repositry by writing command gitinit 
 then we make .gitignore file so that we ignore the node_modules files because it is heavy file
 then we write git add . and commit 
 

@@ -9,25 +9,64 @@ body {
   position: absolute;
   height: 70%;
   background: linear-gradient(to bottom, #d78593, #736aaa 60%);
-  top: 10%;
+  top: 13%;
   left: 35%; }
   #sign-up-form-div form input {
-    margin: 1rem;
+    margin: 0.8rem;
     font-size: 2rem;
     font-family: serif;
     border: none;
     border-radius: 1rem;
     background-color: #dce5e8;
-    box-shadow: 3px 3px 2px #151313;
     padding: 0.1rem; }
   #sign-up-form-div #submit-button {
-    padding: 0.5rem;
+    padding: 0.4rem;
     font-weight: 700;
-    font-size: 3rem;
-    color: white;
-    margin-top: 5rem;
-    background-color: #39394c; }
+    font-size: 2.4rem;
+    border-radius: 0.8rem;
+    margin: 1.5rem;
+    box-shadow: 3px 3px 2px #151313;
+    background: linear-gradient(to right, #d78593, #736aaa 50%); }
     #sign-up-form-div #submit-button:hover {
-      color: #c45a8a;
-      background-color: #4a516b;
+      color: white;
+      background: linear-gradient(to right, #736aaa, #d78593 50%);
       transition: 0.5s; }
+    #sign-up-form-div #submit-button input {
+      margin: 0rem;
+      border-radius: 0rem;
+      background-color: transparent;
+      color: white;
+      font-weight: 700;
+      font-size: 2.4rem;
+      padding: 0.1rem; }
+      #sign-up-form-div #submit-button input:hover {
+        color: blue;
+        transition: all 0.5s; }
+  #sign-up-form-div #google-sign-up-button {
+    margin: 1.5rem;
+    padding: 0.4rem;
+    font-weight: 700;
+    font-size: 2rem;
+    color: white;
+    margin-top: 1rem;
+    border-radius: 0.8rem;
+    background-color: #5252e3;
+    box-shadow: 3px 3px 2px #151313; }
+    #sign-up-form-div #google-sign-up-button:hover {
+      color: blue;
+      background-color: white;
+      transition: 00.5s; }
+      #sign-up-form-div #google-sign-up-button:hover a {
+        color: blue; }
+    #sign-up-form-div #google-sign-up-button a {
+      color: white;
+      text-decoration: none; }
+      #sign-up-form-div #google-sign-up-button a:hover {
+        color: blue;
+        transition: all 0.5s; }
+    #sign-up-form-div #google-sign-up-button .fa-google {
+      background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent; }

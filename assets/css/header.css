@@ -7,15 +7,23 @@
   justify-content: space-between;
   margin: 0rem; }
   #page-header #first-para {
-    margin-left: 0.5rem;
-    width: 70%;
-    font-size: 2rem; }
-  #page-header #second-para li, #page-header ul li {
-    display: inline-block;
-    margin-right: 0.8rem; }
-    #page-header #second-para li a, #page-header ul li a {
+    margin-left: 0.5rem; }
+    #page-header #first-para a {
       text-decoration: none;
-      color: white; }
-      #page-header #second-para li a:hover, #page-header ul li a:hover {
-        color: #977f8a;
-        transition: 0.5s; }
+      color: white;
+      cursor: pointer; }
+  #page-header #second-para {
+    display: flex;
+    justify-content: space-between; }
+    #page-header #second-para ul li {
+      display: inline;
+      margin-right: 0.5rem; }
+      #page-header #second-para ul li a {
+        text-decoration: none;
+        padding: 0.2rem;
+        box-shadow: 1px 0.2px 1.2px 1px #b8a6a6;
+        color: white;
+        background-color: #0c1c39; }
+        #page-header #second-para ul li a:hover {
+          color: #977f8a;
+          transition: 0.5s; }

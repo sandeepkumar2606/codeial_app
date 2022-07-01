@@ -1,8 +1,84 @@
-<link rel="stylesheet" href="/css/user_profile.css">
-<h1>
-        Codeial/Profile Page
-</h1>
+<div id="profile-container">
+
+        <span id="profile-details-container">
+
+                <% if(user.id == profile_user.id) { %>
+
+                        <!-- if user matches then show the form -->
+                        <p> Wants to Update your field? </p>
 
 
-<p><%= user.name%></p>
-<p><%= user.email%></p>
+                        <form action="/users/update/<%= profile_user.id %>" enctype="multipart/form-data" method="post">
+
+                                <label for="name">Name:</label>
+                                <input type="text" name="name" placeholder="Your Name" value="<%= profile_user.name %>"
+                                        required>
+                                <br>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" placeholder="Your Email"
+                                        value="<%= profile_user.email %>" required>
+                                <br>
+                                <label for="file">Profile Picture:</label>
+                                <input type="file" name="avatar" placeholder="Choose Picture">
+                                <br>
+                                <input type="submit" value="Update" id="update-submit-button">
+
+                        </form>
+
+
+                        <% } else { %>
+
+                                <!-- show only the profile info -->
+
+
+                                <div id="else-profile-container">
+                                        <span id="first-span-else-profile">
+
+                                                <b>Name : </b><%= profile_user.name %>
+
+                                                <br>
+
+                                                <b>Email : </b><%= profile_user.email %>
+
+                                        </span>
+
+                                <% if(profile_user.avatar) { %>
+                                        <span id="second-span-else-profile">
+                                                <img src="<%= profile_user.avatar %>" alt="Profile Picture" width="100%"
+                                                        style="border: 4mm ridge rgba(188, 218, 229, 0.6);">
+                                        </span>
+                                <% } else { %>
+
+                                        <h1>Profile Picture is not Uploaded yet!</h1>
+                                <% } %>
+
+
+                                </div>
+
+
+
+                        <% } %>
+        </span>
+
+
+        <% if(user.id == profile_user.id) { %>
+                
+                <span id="profile-image-container">
+                        
+                        <% if(profile_user.avatar) { %>
+
+                                <img src="<%= profile_user.avatar %>" alt="Profile Picture" width="80%"
+                                style="border: 4mm ridge rgba(188, 218, 229, 0.6);">
+
+                        <% } else { %>
+
+                                <h1>Profile Picture is not Uploaded yet!</h1>
+
+                        <% } %>
+
+                        <!-- <img src="<%= profile_user.avatar %>" alt="Profile Picture" width="80%"
+                                style="margin:1rem; border: 4mm ridge rgba(101, 131, 239, 0.6);"> -->
+                </span>
+        <% } %>
+</div>
+
