@@ -84,6 +84,20 @@
                     text-align: center;
                 }
 
+                .toggle-like-button
+                {
+                    text-decoration: none;
+                    color: black;
+                    font-weight: 570;
+                    font-size: 0.8rem;
+                    margin:0.2rem;
+
+                    &:hover
+                    {
+                        color: blue;
+                    }
+                }
+
                 .post-comments {
                     padding: 0.2rem;
 

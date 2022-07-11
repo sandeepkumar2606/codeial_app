@@ -56,6 +56,14 @@
         font-size: 2rem;
         height: auto !important;
         text-align: center; }
+      #home-container #feed-posts #posts-list-container .particular-post .toggle-like-button {
+        text-decoration: none;
+        color: black;
+        font-weight: 570;
+        font-size: 0.8rem;
+        margin: 0.2rem; }
+        #home-container #feed-posts #posts-list-container .particular-post .toggle-like-button:hover {
+          color: blue; }
       #home-container #feed-posts #posts-list-container .particular-post .post-comments {
         padding: 0.2rem; }
         #home-container #feed-posts #posts-list-container .particular-post .post-comments form input {

@@ -18,6 +18,7 @@
                     $('#posts-list-container>ul').prepend(newPost);
                     deletePost($(' .delete-post-button', newPost));
 
+                    new ToggleLike($(' .toggle-like-button', newPost));
 
                     new Noty({
                         theme: "relax",
@@ -65,6 +66,15 @@
                             <div id="post-content">
                             ${ post.content }
                             </div>
+
+                        <small>
+                        
+                        <a class="toggle-like-button" data-likes="0" href="/likes/toggle/?id=${post._id}&type=Post">
+                            <i class="fas fa-thumbs-up"></i>        
+                            0 Likes
+                        </a>
+                        
+                        </small>
                 </p>
         
                 <div class="post-comments">

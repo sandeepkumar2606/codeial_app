@@ -1,6 +1,7 @@
 const Post = require('../models/post');
 const Comment = require('../models/comment');
 const User = require('../models/user');
+const Like = require('../models/like');
 
 //These below create and destroy code is converted into async await because more callback function so we converted
 //into async await so our code becomes neeter(async code is below these two codes create and destroy)
@@ -90,6 +91,9 @@ module.exports.destroy = async function(req,res)
         //.id means converting the object id into string
         if(post.user == req.user.id)
         {
+            await Like.deleteMany({likeable: post , onModel: 'Post'});
+            await Like.deleteMany({_id: {$in: post.comments}});
+
             post.remove();
 
             await Comment.deleteMany({post : req.params.id});

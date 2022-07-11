@@ -4,6 +4,7 @@ const commentsMailer = require('../mailers/comments_mailer');
 const User = require('../models/user');
 const commentEmailWorker = require('../workers/comment_email_worker');
 const queue = require('../config/kue');
+const Like = require('../models/like');
 
 //This below code is converted to async await 
 
@@ -123,7 +124,8 @@ module.exports.destroy = async function(req,res)
     
                 let post = await Post.findByIdAndUpdate(postId, { $pull: {comments:req.params.id}});
             
-
+                await Like.deleteMany({likeable: comment._id, onModel:'Comment'});
+                
                 req.flash('success','Comment deleted Successfully!');
                 
                 return res.redirect('back');

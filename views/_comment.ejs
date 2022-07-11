@@ -32,6 +32,17 @@
             </small>
 
         <% } %>
+
+        <small>
+            <% if(locals.user) { %>
+                <a class="toggle-like-button" data-likes="<%= comment.likes.length %>" href="/likes/toggle/?id=<%=comment._id%>&type=Comment">
+                    <i class="fas fa-thumbs-up"></i>    
+                    <%= comment.likes.length %> Likes
+                </a>
+            <% } else { %>
+                <%= comment.likes.length %> Likes
+            <% } %>
+        </small>
         
     </span>
     
