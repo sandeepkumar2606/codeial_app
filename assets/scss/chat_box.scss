@@ -12,6 +12,17 @@
     border-radius: 0.5rem;
 
     #chat-messages-list{
+
+		div
+		{
+			text-align: center !important;
+			font-weight: 900;
+			margin-top: -0.5rem;
+			font-size: 1.3rem;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			margin-bottom: 0.2rem;
+		}
+
     	list-style: none;
 	    padding: 10px;
 	    height: 70%;

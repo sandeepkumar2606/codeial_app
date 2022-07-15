@@ -40,7 +40,6 @@
           transform: scale(1.2) translateY(3px);
           transition: 0.2s all; }
       #home-container #feed-posts #posts-list-container .particular-post #deleteicon2 {
-        margin-left: 1%;
         font-size: 1rem;
         color: #f38484; }
         #home-container #feed-posts #posts-list-container .particular-post #deleteicon2:hover {

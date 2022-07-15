@@ -1,37 +1,31 @@
-<p>
-    <small>
-            <% if(comment.user.avatar) { %>
-                <img src="<%= comment.user.avatar %>" alt="Img" style="width: 17px; border-radius: 50%;">
-
-            <% } else { %>
-
-                <i class="fas fa-user"></i>
-
-            <% } %>
-
-
-    </small>
-
+<p id = "comment-<%= comment._id %>">
+    <!-- <%= comment %> -->
     <span>
+        <small>
+                <% if(comment.user.avatar) { %>
+                    <img src="<%= comment.user.avatar %>" alt="Img" style="width: 17px; border-radius: 50%;">
+
+                <% } else { %> 
+
+                    <i class="fas fa-user"></i>
+
+                 <% } %>
+
+
+        </small>
+
         <small>
             <%= comment.user.name %>
         </small>
+    <span>
 
         <br>
+
+    <span>
         <span id="comment-data">
             <%= comment.content %>
         </span>
-        
-        <% if(locals.user && locals.user.id == comment.user.id) { %>
-
-            <small>
-                <a href="/comments/destroy/<%= comment.id %>">
-                    <i class="fas fa-trash-alt" id="deleteicon2"></i>
-
-                </a>
-            </small>
-
-        <% } %>
+    
 
         <small>
             <% if(locals.user) { %>
@@ -43,6 +37,19 @@
                 <%= comment.likes.length %> Likes
             <% } %>
         </small>
+
+
+        <% if(locals.user && locals.user.id == comment.user) { %>
+            <small>
+                <a class="delete-comment-button" href="/comments/destroy/<%= comment.id %>">
+                    
+                    <i class="fas fa-trash-alt" id="deleteicon2"></i>
+
+                </a>
+            </small>
+
+        <% } %>
+
         
     </span>
     

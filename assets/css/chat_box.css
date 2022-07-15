@@ -14,6 +14,13 @@
     padding: 10px;
     height: 70%;
     overflow: auto; }
+    #user-chat-box #chat-messages-list div {
+      text-align: center !important;
+      font-weight: 900;
+      margin-top: -0.5rem;
+      font-size: 1.3rem;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      margin-bottom: 0.2rem; }
     #user-chat-box #chat-messages-list .other-message {
       text-align: left;
       padding: 5px; }

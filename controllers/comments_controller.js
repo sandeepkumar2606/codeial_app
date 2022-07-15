@@ -41,6 +41,7 @@ module.exports.create = async function(req,res)
         {
             if(post)
             {
+                
                 // console.log(req.user.email);
                 let comment = await Comment.create({
                     content:req.body.content,
@@ -48,7 +49,6 @@ module.exports.create = async function(req,res)
                     user:req.user._id
                 });
     
-
                     post.comments.push(comment);
                     post.save();
                     
@@ -69,7 +69,8 @@ module.exports.create = async function(req,res)
                         console.log('job enqueued',job.id);
                     });
 
-                    req.flash('success','Commented Successfully!!');
+
+                    req.flash('success','Commented Successfully!');
     
                     return res.redirect('/');
             }
@@ -125,6 +126,16 @@ module.exports.destroy = async function(req,res)
                 let post = await Post.findByIdAndUpdate(postId, { $pull: {comments:req.params.id}});
             
                 await Like.deleteMany({likeable: comment._id, onModel:'Comment'});
+
+                if (req.xhr){
+                    return res.status(200).json({
+                        data: {
+                            comment_id: req.params.id
+                        },
+                        message: "Post deleted"
+                    });
+                }
+    
                 
                 req.flash('success','Comment deleted Successfully!');
                 
