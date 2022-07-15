@@ -33,11 +33,22 @@
 		    text-align: left;
 		    padding: 5px;
 		    span{
-		    	display: inline-block;
-                border-radius: 1rem;
-	    		padding: 15px;
-		    	background-color: #ffa0a0;
+		    	border-radius: 1rem;
+				display: inline-block;
+				padding: 15px;
+				background-color: #ffa0a0;
+				margin-bottom: -0.5rem;
+				margin-top: 1.2rem;
 		    }
+
+			sub
+			{
+				font-size: 0.8rem;
+				color:gray;
+				margin-top: -0.1rem;
+				margin-left:0.2rem;
+
+			}
 		    
 	    }
 
@@ -46,11 +57,21 @@
 		    padding: 5px;
 		   
 		    span{
-                border-radius: 1rem;
-	    		display: inline-block;
-	    		padding: 15px;
-    			background-color: #a0dcff;
+				border-radius: 1rem;
+				display: inline-block;
+				padding: 15px;
+				background-color: #a0dcff;
+				margin-bottom: -0.5rem;
+				margin-top: 1.2rem;
 		    }
+
+			sub
+			{
+				font-size: 0.8rem;
+				color:gray;
+				margin-top: -0.1rem;
+				margin-left:0.2rem;
+			}
 		   
 	    }
 

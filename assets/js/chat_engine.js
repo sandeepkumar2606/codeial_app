@@ -138,15 +138,18 @@ class ChatEngine{
             let firstname = tmpArray.join(' '); // join the array to make first and middlename and store it in "firstname" variale
 
 
-            newMessage.append($('<sub>', {
-                'html': firstname
-            }));
-
-            newMessage.append('<br>');
+           
 
             newMessage.append($('<span>', {
                 'html': data.message
             }));
+
+            newMessage.append('<br>');
+
+            newMessage.append($('<sub>', {
+                'html': firstname
+            }));
+
 
             newMessage.addClass(messageType);
 
