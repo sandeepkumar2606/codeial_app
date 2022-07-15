@@ -1,4 +1,4 @@
-# Codeial (Under Development)
+# Codeial
 
 It is a social medial website using MERN Stack Technology in which user can create a post , delete his/her created post. User can add comments to any of the post and he/she can delete his/her comments also and before doing these the user have to SignIn if he has already created his/her account otherwise User have have to first SignUp and then using the signup email and password he/she able to login into the website. User can add his/her profile picture and also he/she can change his/her profile picture , edit their details in the profile section. User can see the profile of the other users also but they have only the read access to the other profiles.
 
